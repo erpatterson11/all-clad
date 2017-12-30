@@ -1,33 +1,4 @@
 .homepage-container {
     /* background-color: #CCCCCC; */
-    padding: 40px 10px;
-}
-
-.divider-bar-small {
-    margin: 0 auto;
-    width: 30px;
-    height: 1px;
-    background-color: var(--red);
-}
-
-.featured-section-header {
-    font-size: 24px;
-    font-weight: 100;
-    text-transform: uppercase;
-    margin: 10px 0 40px 0;
-}
-
-.featured-section-sub-header {
-    font-size: 12px;
-    font-weight: 200;
-    text-transform: uppercase;
-    margin: 10px 0;
-}
-
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 200px);
-    grid-gap: 40px;
-    justify-content: center;
-    margin: 40px 0;
+    padding: 40px 0px;
 }
