@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
 
 import { Switch, Route } from 'react-router-dom'
+import { connect } from 'react-redux'
+
 
 import './App.css';
 
 class App extends Component {
+
+  componentDidMount() {
+
+  }
+
   render() {
     return (
       <div>
@@ -23,4 +30,8 @@ class App extends Component {
   }
 }
 
-export default App;
+function mapStateToProps(state) {
+  return state.reducer
+}
+
+export default connect(mapStateToProps, { testActionCreator, testAsyncActionCreator })(App);
