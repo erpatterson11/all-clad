@@ -1,0 +1,18 @@
+.navbar {
+    height: 100px;
+    color: var(--white);
+    background-color: var(--grey);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar-logo {
+    height: 70px;
+}
+
+.navbar-link-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
