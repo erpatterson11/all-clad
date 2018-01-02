@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 
-import Navbar from './components/Navbar/Navbar'
-
 import { Switch, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
+
+import Navbar from './components/Navbar/Navbar'
+import Homepage from './components/Homepage/Homepage'
+import Footer from './components/Footer/Footer'
 
 
 import './App.css';
@@ -12,11 +14,11 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="App">
         <Navbar />
         <div>
           <Switch>
-            <Route exact path="/" render={() => "Home"} />
+            <Route exact path="/" component={Homepage} />
             <Route path="/collections" render={() => "collections"} />
             <Route path="/products" render={() => "products"} />
             <Route path="/recipes" render={() => "recipes"} />
@@ -26,6 +28,7 @@ class App extends Component {
             <Route path="/customer-service" render={() => "customer service"} />
           </Switch>
         </div>
+        <Footer />
       </div>
     );
   }
