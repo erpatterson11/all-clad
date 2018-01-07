@@ -3,7 +3,7 @@ import React from 'react'
 import './ProductCard.css'
 
 export default function ProductCard(props) {
-    const { img, title, focus, onMouseEnter, onMouseLeave } = props
+    const { img, title, focus, type, onMouseEnter, onMouseLeave } = props
 
     const isFocused = focus ? "product-card-unfocus" : ''
 
@@ -18,7 +18,10 @@ export default function ProductCard(props) {
                 style={{backgroundImage: `url(${img})`}}
             >
             </div>
-            <div className="product-card-title">{title}</div>
+            <div className="product-card-text-container">
+                <p className="product-card-title">{title}</p>
+                <p className="product-card-link-description">View {type}</p>
+            </div>
         </div>
         )
     }

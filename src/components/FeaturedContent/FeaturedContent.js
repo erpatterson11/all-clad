@@ -34,6 +34,7 @@ export default class FeaturedContent extends Component {
                 key={item.title}
                 img={item.img}
                 title={item.title}
+                type={type}
                 focus={focus}
                 onMouseEnter={() => this.setHovered(item)}
                 onMouseLeave={this.removeHovered}
@@ -44,11 +45,11 @@ export default class FeaturedContent extends Component {
             <div>
                 <h3 className="featured-section-sub-header">{subtitle}</h3>
                 <div className="divider-bar-small"></div>
-                <h2 className="featured-section-header">Featured {type}</h2>
+                <h2 className="featured-section-header">Featured {type + "s"}</h2>
                 <div className="card-container">
                 {products}
                 </div>
-                <Button text={`View All ${type}`} />
+                <Button text={`View All ${type + "s"}`} />
             </div>
         )
     }
