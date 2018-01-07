@@ -9,9 +9,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 40px;
 }
 
 .banner-text-image {
+
 }
 
 .newsletter-signup-container {
@@ -80,11 +82,5 @@
 }
 
 .newsletter-signup-button:hover {
-    border: none;
     background-color: var(--red);
-    font-weight: 700;
-    font-size: 14px;
-    height: 60px;
-    width: 207px;
-    margin: 40px 5px;
 }

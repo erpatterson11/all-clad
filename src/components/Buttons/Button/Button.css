@@ -1,0 +1,33 @@
+.link-button {
+    background-color: var(--grey);
+    padding: 20px 30px;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: capitalize;
+    border: none;
+    cursor: pointer;
+    margin: 40px;
+    transition: 0.1s;
+}
+
+.link-button-red {
+    background-color: var(--red);
+}
+
+.raised-link-button:hover {
+    background-color: var(--red);
+    box-shadow: 1px 1px 10px 1px #CCCCCC;
+    transform: translateY(-2px);
+}
+
+.raised-link-button:active {
+    transform: translateY(2px);
+}
+
+.flat-link-button:hover {
+    background-color: var(--red);
+}
+
+
+

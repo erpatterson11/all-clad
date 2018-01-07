@@ -6,6 +6,7 @@ import featuredProducts from '../../assets/featuredProducts'
 import featuredRecipes from '../../assets/featuredRecipes'
 import productsBanner from '../../assets/featuredProductsBanner'
 
+import Button from '../Buttons/Button/Button'
 
 import './Homepage.css'
 
@@ -32,11 +33,11 @@ export default class Homepage extends Component {
 
         return (
             <div className="homepage-container">
-                <FeaturedContent content={featuredProducts} type="Products" subtitle="Latest & Greatest" />
+                <FeaturedContent content={featuredProducts} type="Product" subtitle="Latest & Greatest" />
                 <div className="homepage-products-banner" style={{backgroundImage: `url(${productsBanner.img})`}}>
                     <img className="banner-text-image" src={productsBanner.text} />
                 </div>
-                <FeaturedContent content={featuredRecipes} type="Recipes" subtitle="Depth of Flavor" />
+                <FeaturedContent content={featuredRecipes} type="Recipe" subtitle="Depth of Flavor" />
                 <div className="newsletter-signup-container">
                     <h2 className="newsletter-signup-header">News & Special Offers</h2>
                     <p className="newsletter-signup-subheader">Sign up to receive fresh news and special offers from All-Clad.</p>
@@ -78,9 +79,11 @@ export default class Homepage extends Component {
                         />
                         <label className="input-label" htmlFor="email-input">Email</label>
                     </div>
-                    <button className="newsletter-signup-button">Sign up</button>
+                    <Button text="Sign Up" onClick={()=>""} red flat style={{width: "207px", height: "60px", margin: "40px 5px"}} />
                 </div>
             </div>
         )
     }
 }
+
+// <button className="newsletter-signup-button">Sign up</button>
