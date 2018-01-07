@@ -1,0 +1,24 @@
+.produc-grid-container {
+    text-align: left;
+}
+
+.product-grid-bar {
+    color: var(--white);
+    background-color: var(--grey);
+    font-weight: 700;
+    font-size: 18px;
+    margin: 10px;
+    height: 30px;
+    text-align: left;
+    padding-left: 20px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.product-grid-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+}
