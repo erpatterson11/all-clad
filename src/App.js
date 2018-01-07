@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import Navbar from './components/Navbar/Navbar'
+import Products from './components/Products/Products'
 import Homepage from './components/Homepage/Homepage'
 
 import Footer from './components/Footer/Footer'
 
-import './App.css';
+import './App.css'
 
 class App extends Component {
 
@@ -20,7 +21,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Homepage} />
             <Route path="/collections" render={() => "collections"} />
-            <Route path="/products" render={() => "products"} />
+            <Route path="/products" component={Products} />
             <Route path="/recipes" render={() => "recipes"} />
             <Route path="/registry" render={() => "registry"} />
             <Route path="/chefs" render={() => "chefs"} />
@@ -38,4 +39,4 @@ function mapStateToProps(state) {
   return state.reducer
 }
 
-export default connect(mapStateToProps)(App);
+export default withRouter(connect(mapStateToProps)(App))

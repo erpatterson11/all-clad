@@ -1,8 +1,8 @@
 .products-container {
-    width: 850px;
+    width: 1220px;
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: 100px max-content;
+    grid-template-columns: 258px 912px;
     grid-template-areas: "aside main-content";
     grid-gap: 40px;
     margin: 40px auto;
