@@ -1,0 +1,13 @@
+.aside-container {
+    grid-area: aside;
+    height: max-content;
+}
+
+.aside-header {
+    background-color: var(--grey);
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 0;
+}

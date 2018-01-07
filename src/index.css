@@ -9,4 +9,6 @@
   --grey: #333333;
   --white: #FFFFFF;
   --red: red;
+  --light-grey: rgb(200,200,200);
+  --lightest-grey: rgb(245,245,245);
 }
