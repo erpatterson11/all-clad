@@ -9,19 +9,34 @@ export default class FeaturedContent extends Component {
     constructor(props) {
         super(props)
         this.state = {
-
+            hovered: null
         }
+        this.setHovered = this.setHovered.bind(this)
+        this.removeHovered = this.removeHovered.bind(this)
+    }
+
+    setHovered(item) {
+        this.setState({hovered: item})
+    }
+
+    removeHovered() {
+        this.setState({hovered: null})
     }
 
     render() {
 
         const { content, type, subtitle } = this.props
+        const { hovered } = this.state
 
         const products = content.map( item => {
+            const focus = hovered ? hovered.title != item.title : null
             return <ProductCard 
                 key={item.title}
                 img={item.img}
                 title={item.title}
+                focus={focus}
+                onMouseEnter={() => this.setHovered(item)}
+                onMouseLeave={this.removeHovered}
             />
         })
 
