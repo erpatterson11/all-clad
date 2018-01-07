@@ -27,10 +27,11 @@ export default class ProductCard extends Component {
                     {price}
                 </p>
                 <div className="product-card-actions">
-                    <input type="checkbox" /><span>Compare</span>
-                    <Button text="Buy now" flat red onClick={() => ""} />
+                    <div>
+                        <input type="checkbox" /><span> Compare</span>
+                    </div>
+                    <Button text="Buy now" flat red onClick={() => ""} style={{margin: 0, padding: 13, width: 150}} />
                 </div>
-
             </div>
         )
     }
