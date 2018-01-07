@@ -80,11 +80,5 @@
 }
 
 .newsletter-signup-button:hover {
-    border: none;
     background-color: var(--red);
-    font-weight: 700;
-    font-size: 14px;
-    height: 60px;
-    width: 207px;
-    margin: 40px 5px;
 }

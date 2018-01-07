@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import ProductCard from './../ProductCard/ProductCard'
-
+import Button from './../Buttons/Button/Button'
 
 import './FeaturedContent.css'
 
@@ -33,7 +33,7 @@ export default class FeaturedContent extends Component {
                 <div className="card-container">
                 {products}
                 </div>
-                <button className="link-button">View All {type}</button>
+                <Button text={`View All ${type}`} />
             </div>
         )
     }

@@ -6,6 +6,7 @@ import featuredProducts from '../../assets/featuredProducts'
 import featuredRecipes from '../../assets/featuredRecipes'
 import productsBanner from '../../assets/featuredProductsBanner'
 
+import Button from '../Buttons/Button/Button'
 
 import './Homepage.css'
 
@@ -78,9 +79,11 @@ export default class Homepage extends Component {
                         />
                         <label className="input-label" htmlFor="email-input">Email</label>
                     </div>
-                    <button className="newsletter-signup-button">Sign up</button>
+                    <Button text="Sign Up" onClick={()=>""} red flat style={{width: "207px", height: "60px", margin: "40px 5px"}} />
                 </div>
             </div>
         )
     }
 }
+
+// <button className="newsletter-signup-button">Sign up</button>
