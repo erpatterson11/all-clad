@@ -5,8 +5,8 @@ import { connect } from 'react-redux'
 
 import Navbar from './components/Navbar/Navbar'
 import Homepage from './components/Homepage/Homepage'
-import Footer from './components/Footer/Footer'
 
+import Footer from './components/Footer/Footer'
 
 import './App.css';
 
