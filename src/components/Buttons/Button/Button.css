@@ -4,7 +4,7 @@
     color: var(--white);
     font-size: 14px;
     font-weight: 700;
-    text-transform: capitalize;
+    text-transform: uppercase;
     border: none;
     cursor: pointer;
     margin: 40px;
@@ -22,7 +22,7 @@
 }
 
 .raised-link-button:active {
-    transform: translateY(2px);
+    transform: translateY(0px);
 }
 
 .flat-link-button:hover {

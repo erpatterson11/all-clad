@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 
 import ProductCard from './ProductCard/ProductCard'
+import Button from './../../Buttons/Button/Button'
+
+import product from '../../../assets/featuredProductsBanner';
 
 import './ProductGrid.css'
-import product from '../../../assets/featuredProductsBanner';
 
 
 export default class ProductGrid extends Component {
@@ -12,7 +14,7 @@ export default class ProductGrid extends Component {
     }
 
     render() {
-        const { products } = this.props
+        const { products, title } = this.props
 
         const productCards = products.map((prod, i) => (
             <ProductCard prod={prod} key={prod.title + i} />
@@ -21,11 +23,12 @@ export default class ProductGrid extends Component {
         return (
             <div className="product-grid-containter">
                 <div className="product-grid-bar">
-                    Skillets
+                    {title}
                 </div>
                 <div className="product-grid-grid">
                     {productCards}
                 </div>
+                <Button text="See more" style={{width: 200, margin: 0, marginBottom: 20}} />
             </div>
         )
     }

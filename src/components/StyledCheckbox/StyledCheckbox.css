@@ -5,6 +5,15 @@
     cursor: pointer;
 }
 
+.styled-checkbox-label {
+    transition: 0.2s ease-out;
+}
+
+.styled-checkbox-container:hover .styled-checkbox-label {
+    transform: translateX(5px);
+    transition: 0.1s cubic-bezier(0.32, 0.68, 1.45, 1.15);
+}
+
 .check-box-filled {
     position: absolute;
     top: 0;

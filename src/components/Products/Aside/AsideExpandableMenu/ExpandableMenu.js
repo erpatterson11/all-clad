@@ -41,12 +41,12 @@ export default class ExpandableMenu extends Component {
         const { expanded } = this.state
 
         const renderItems = items.map(item => (
-            <div className="expandable-menu-item" key={item}>
-                <StyledCheckbox label={item} checked={this.isChecked(item)} onClick={() => this.handleCheck(item)} />
+            <div className="expandable-menu-item" key={item} onClick={() => this.handleCheck(item)}>
+                <StyledCheckbox label={item} checked={this.isChecked(item)} />
             </div>
         ))
 
-        const itemsStyle = expanded ? {height: 52.5 * items.length} : {}
+        const itemsStyle = expanded ? {height: 50 * items.length} : {}
         const arrowStyle = expanded ? {transform: "rotate(90deg)"} : {}
 
         return (
