@@ -4,8 +4,9 @@
     align-items: center;
     padding: 15px;
     padding-bottom: 0;
+    cursor: pointer;
     /* border: 1px solid var(--grey); */
-    transition: 0.2s;
+    transition: ease-in-out 0.2s;
 }
 
 .product-card-container-2:hover {
@@ -31,7 +32,7 @@
     text-transform: uppercase;
     font-weight: 700;
     cursor: pointer;
-    transition: 0.2s;
+    transition: ease-in-out 0.2s;
     margin-bottom: 20px;
 }
 

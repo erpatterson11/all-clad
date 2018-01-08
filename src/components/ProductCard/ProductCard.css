@@ -4,7 +4,7 @@
     height: 300px;
     cursor: pointer;
     background-color: var(--white);
-    transition: 0.1s;
+    transition: ease-in-out 0.1s;
 }
 
 .product-card-unfocus {
@@ -18,7 +18,7 @@
     background-size: cover;
     display: flex;
     align-items: center;
-    transition: 0.2s;
+    transition: ease-in-out 0.2s;
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -55,7 +55,7 @@
     font-size: 12px;
     overflow: hidden;
     opacity: 0;
-    transition: 0.15s;
+    transition: ease-in-out 0.15s;
 }
 
 .product-card-container:hover .product-card-link-description {

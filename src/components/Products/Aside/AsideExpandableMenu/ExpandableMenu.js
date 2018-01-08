@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import { arrow } from './../../../../assets/svg/uiIcons'
+import StyledCheckbox from './../../../StyledCheckbox/StyledCheckbox'
 
 import './ExpandableMenu.css'
 
@@ -25,12 +26,12 @@ export default class ExpandableMenu extends Component {
 
         const renderItems = items.map(item => (
             <div className="expandable-menu-item" key={item}>
-                <input type="checkbox" />
+                <StyledCheckbox />
                 <span> {item}</span>
             </div>
         ))
 
-        const itemsStyle = expanded ? {height: "auto"} : {}
+        const itemsStyle = expanded ? {height: 41.5 * items.length} : {}
         const arrowStyle = expanded ? {transform: "rotate(90deg)"} : {}
 
         return (

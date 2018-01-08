@@ -8,7 +8,7 @@
     border: none;
     cursor: pointer;
     margin: 40px;
-    transition: 0.1s;
+    transition: ease-in-out 0.1s;
 }
 
 .link-button-red {

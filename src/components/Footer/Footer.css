@@ -9,14 +9,14 @@
 
 .footer-header {
     margin: 18px;
-    transition: 0.2s;
+    transition: ease-in-out 0.2s;
 }
 
 .social-icon {
     width: 28px;
     cursor: pointer;
     opacity: 0.7;
-    transition: 0.2s;
+    transition: ease-in-out 0.2s;
 }
 
 .social-icon:hover {
@@ -44,7 +44,7 @@
 .footer-link {
     padding: 10px 15px;
     cursor: pointer;
-    transition: 0.2s;
+    transition: ease-in-out 0.2s;
 }
 
 .footer-link:hover {
