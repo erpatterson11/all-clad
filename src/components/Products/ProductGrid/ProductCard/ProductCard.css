@@ -4,7 +4,6 @@
     align-items: center;
     padding: 15px;
     padding-bottom: 0;
-    cursor: pointer;
     /* border: 1px solid var(--grey); */
     transition: ease-in-out 0.2s;
 }
@@ -16,6 +15,7 @@
 .product-card-img-2 {
     max-width: 204px;
     max-height: 204px;
+    cursor: pointer;
 }
 
 .product-card-img-container-2 {
@@ -56,5 +56,10 @@
     margin-bottom: 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.product-card-checkbox-container {
+    display: flex;
     align-items: center;
 }

@@ -9,14 +9,30 @@ export default class ExpandableMenu extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            expanded: false
+            expanded: false,
+            checked: []
         }
 
         this.toggleExpand = this.toggleExpand.bind(this)
+        this.handleCheck = this.handleCheck.bind(this)
     }
 
     toggleExpand() {
         this.setState({expanded: !this.state.expanded})
+    }
+
+    handleCheck(item) {
+        if (this.isChecked(item)) {
+            const filtered = this.state.checked.filter(val => val !== item)
+            this.setState({checked: filtered})
+        } else {
+            const newChecked = [...this.state.checked, item]
+            this.setState({checked: newChecked})
+        }
+    }
+
+    isChecked(item) {
+        return this.state.checked.includes(item)
     }
 
     render() {
@@ -26,12 +42,11 @@ export default class ExpandableMenu extends Component {
 
         const renderItems = items.map(item => (
             <div className="expandable-menu-item" key={item}>
-                <StyledCheckbox />
-                <span> {item}</span>
+                <StyledCheckbox label={item} checked={this.isChecked(item)} onClick={() => this.handleCheck(item)} />
             </div>
         ))
 
-        const itemsStyle = expanded ? {height: 41.5 * items.length} : {}
+        const itemsStyle = expanded ? {height: 52.5 * items.length} : {}
         const arrowStyle = expanded ? {transform: "rotate(90deg)"} : {}
 
         return (

@@ -1,5 +1,6 @@
 .styled-checkbox-container {
-    display: inline;
+    display: inline-flex;
+    align-items: center;
     position: relative;
     cursor: pointer;
 }

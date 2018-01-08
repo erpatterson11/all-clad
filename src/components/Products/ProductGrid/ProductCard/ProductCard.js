@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 
 import Button from '../../../Buttons/Button/Button'
+import StyledCheckbox from './../../../StyledCheckbox/StyledCheckbox'
 
 import './ProductCard.css'
 
@@ -27,9 +28,7 @@ export default class ProductCard extends Component {
                     {price}
                 </p>
                 <div className="product-card-actions">
-                    <div>
-                        <input type="checkbox" /><span> Compare</span>
-                    </div>
+                    <StyledCheckbox label="Compare" />
                     <Button text="Buy now" flat red onClick={() => ""} style={{margin: 0, padding: 13, width: 150}} />
                 </div>
             </div>
