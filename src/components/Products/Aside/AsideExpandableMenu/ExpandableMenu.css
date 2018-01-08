@@ -1,0 +1,37 @@
+.expandable-menu-container {
+    background-color: var(--lightest-grey);
+    color: var(--grey);
+    text-transform: uppercase;
+    text-align: start;
+    font-size: 14px;
+}
+
+.expandable-menu-button {
+    font-weight: 700;
+    padding: 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.expandable-menu-button > span {
+    transition: ease-in-out 0.2s;
+}
+
+.expandable-menu-item {
+    padding: 12px;
+    font-size: 13px;
+    border-bottom: 0.5px solid var(--light-grey);
+    transition: ease-in-out 0.2s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+} 
+
+.expandable-menu-items-container {
+    height: 0;
+    overflow: hidden;
+    transition: 0.2s cubic-bezier(0.6, 0.01, 0.58, 0.96);
+}
+

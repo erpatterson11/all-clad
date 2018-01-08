@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Lato', sans-serif;
   box-sizing: border-box;
 }
 
@@ -9,4 +9,6 @@
   --grey: #333333;
   --white: #FFFFFF;
   --red: red;
+  --light-grey: rgb(200,200,200);
+  --lightest-grey: rgb(245,245,245);
 }

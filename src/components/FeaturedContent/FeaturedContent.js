@@ -47,7 +47,7 @@ export default class FeaturedContent extends Component {
                 <div className="divider-bar-small"></div>
                 <h2 className="featured-section-header">Featured {type + "s"}</h2>
                 <div className="card-container">
-                {products}
+                    {products}
                 </div>
                 <Button text={`View All ${type + "s"}`} />
             </div>
