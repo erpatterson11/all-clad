@@ -10,11 +10,14 @@ import { arrow } from './../../../assets/svg/uiIcons'
 
 import "./ProductImgCarousel.css"
 
+const images =  [chefsPan, saucePan, skillet, ssSkillet, wok, saucePan, wok, chefsPan, skillet, ssSkillet, wok, saucePan, wok, chefsPan]
+
 export default class ProductImgCarousel extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            images: [chefsPan, saucePan, skillet, ssSkillet, wok, chefsPan, saucePan, skillet, ssSkillet, wok, chefsPan, saucePan, skillet, ssSkillet, wok],
+            images:images,
+            scrollable: images.length > 4,
             chosenImageIndex: 0,
             minScrollIndex: 0,
             carouselStyle: {},
@@ -71,9 +74,12 @@ export default class ProductImgCarousel extends Component {
     } 
 
     render() {
-        const selectedImage = this.state.images[this.state.chosenImageIndex]
-        const images = this.state.images.map( (img,i) => {
-            const selected = (i == this.state.chosenImageIndex) ? {border: "1px solid red"} : {}
+
+        const { images, chosenImageIndex, scrollable } = this.state
+
+        const selectedImage = images[chosenImageIndex]
+        const imageCards = images.map( (img,i) => {
+            const selected = (i == chosenImageIndex) ? {border: "1px solid red"} : {}
             return (
                 <div
                     key={i} 
@@ -86,18 +92,18 @@ export default class ProductImgCarousel extends Component {
 
         return (
             <div className="product-img-carousel">
-                <div className="product-img-carousel-img-container" style={{backgroundImage: `url(${selectedImage})`}}>
+                <div className="product-img-carousel-img-container"  style={{backgroundImage: `url(${selectedImage})`}}>
                 </div>
                 <div className="product-img-carousel-carousel">
-                    <div className="product-img-carousel-button" data-left onClick={()=>this.move("left")}>
+                    <div className="product-img-carousel-button" data-clickable={scrollable} data-left onClick={()=>this.move("left")}>
                         {arrow}
                     </div>
                     <div className="image-carousel-container">    
                         <div className="image-carousel-content" ref={ref => this.carousel = ref} style={this.state.carouselStyle} >
-                            {images}
+                            {imageCards}
                         </div>
                     </div>
-                    <div className="product-img-carousel-button button-right" onClick={()=>this.move("right")}>
+                    <div className="product-img-carousel-button button-right" data-clickable={scrollable} onClick={()=>this.move("right")}>
                         {arrow}
                     </div>
                 </div>

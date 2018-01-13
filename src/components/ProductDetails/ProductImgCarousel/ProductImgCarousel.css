@@ -15,6 +15,7 @@
 .product-img-carousel-carousel {
     height: 100px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -24,7 +25,6 @@
     margin: 0 5px;
     border: 1px solid var(--light-grey);
     fill: var(--light-grey);
-    cursor: pointer;
     flex-shrink: 0;
     display: flex;
     justify-content: center;
@@ -32,7 +32,8 @@
     transition: 0.25s;
 }
 
-.product-img-carousel-button:hover {
+.product-img-carousel-button[data-clickable=true]:hover {
+    cursor: pointer;
     background-color: var(--lightest-grey);
 }
 
@@ -58,6 +59,7 @@
 
 .image-carousel-container { 
     overflow-x: hidden;
+    flex-grow: 1;
 }
 
 .image-carousel-content {
