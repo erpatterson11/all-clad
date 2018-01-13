@@ -1,0 +1,20 @@
+.product-details-container {
+    width: 1220px;
+    margin: 50px;
+    display: grid;
+    grid-template-rows: 700px 150px 400px 600px;
+    grid-auto-rows: max-content;
+    grid-template-columns: repeat(2, 610px);
+    justify-content: center;
+    grid-template-areas: 
+    "image-carousel product-details"
+    "prod-sub prod-sub"
+    "prod-desc prod-desc"
+    "essentials-carousel essential-carousel"
+    "specs specs"
+    "instructions instructions"
+    "faq faq"
+    "prod-recipes prod-recipes"
+    "review-summary review-summary"
+    "reviews reviews";
+}

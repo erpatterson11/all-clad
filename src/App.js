@@ -4,6 +4,7 @@ import { Switch, Route, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import Navbar from './components/Navbar/Navbar'
+import ProductDetails from './components/ProductDetails/ProductDetails'
 import Products from './components/Products/Products'
 import Homepage from './components/Homepage/Homepage'
 
@@ -21,6 +22,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Homepage} />
             <Route path="/collections" render={() => "collections"} />
+            <Route path="/details" component={ProductDetails} />
             <Route path="/products" component={Products} />
             <Route path="/recipes" render={() => "recipes"} />
             <Route path="/registry" render={() => "registry"} />
